@@ -1,13 +1,10 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-
-import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 const pageTitle = "About Me";
 
 const identity = {
-    firstName: "Sarah",
+    firstName: "Astro",
     country: "Canada",
     occupation: "Technical Writer",
     hobbies: ["photography", "birdwatching", "baseball"],
@@ -23,6 +20,8 @@ const skillColor = "navy";
 const fontWeight = "bold";
 const textCase = "uppercase";
 ---
+<BaseLayout pageTitle={pageTitle}>
+</BaseLayout>
 
 <html lang="en">
 	<head>
@@ -43,10 +42,7 @@ const textCase = "uppercase";
             }
         </style>
 	</head>
-	<body>
 
-        <Header />
-    <h1>{pageTitle}</h1>
 
     <p>Few facts about me:</p>
     <ul>
@@ -73,6 +69,6 @@ const textCase = "uppercase";
     <ul>
         {skills.map((skill) => <li class="skill">{skill}</li>)}
     </ul>
-    <Footer />
+
 </body>
 </html>

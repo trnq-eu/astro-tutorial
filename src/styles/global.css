@@ -66,7 +66,7 @@ h1 {
 
 }
 
-hamburger {
+.hamburger {
   padding-right: 20px;
   cursor: pointer;
 }
